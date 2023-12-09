@@ -1,0 +1,16 @@
+<% include ./partials/header.ejs %>
+
+<div class="bg-zinc-800 min-h-screen w-full text-white p-5 flex  flex-wrap gap-10">
+<% alldata.forEach(element => { %>
+  <div class="w-56 max-h-[380px] border-2  border-slate-500 overflow-hidden rounded-lg">
+    <div class="object-cover object-cover  h-40 w-56 overflow-hidden  rounded-lg">
+      <img src="/images/uploads/<%= element.image  %>" alt="">
+    </div>
+    <h1 class="font-bold m-2"><%= element.title %></h1>
+    <p class="m-1"> <%= element.description %></p>
+  </div>
+    
+    <% }); %>
+</div>
+
+<% include ./partials/footer.ejs %>
